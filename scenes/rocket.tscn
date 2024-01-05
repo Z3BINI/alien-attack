@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_jkstx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rii7"]
-radius = 49.0
-height = 244.0
+radius = 16.0
+height = 90.0
 
 [node name="Rocket" type="Area2D"]
 script = ExtResource("1_jkstx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_akm75")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
