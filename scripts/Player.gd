@@ -31,3 +31,6 @@ func shoot():
 	rocket_container.add_child(rocket_instance)
 	rocket_instance.global_position = global_position
 	rocket_instance.global_position.x += 80
+	
+func take_damage():
+	print('ouch!')
