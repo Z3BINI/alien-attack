@@ -5,6 +5,7 @@ var score = 0
 var game_over_scene = preload('res://scenes/game_over_screen.tscn')
 @onready var player = $Player
 @onready var hud = $UI/HUD
+@onready var enemy_hit_sound = $EnemyHitSound
 
 func _ready():
 	hud.set_score_label(score)
@@ -29,5 +30,6 @@ func _on_enemy_spawner_enemy_spawned(enemy_instance):
 	add_child(enemy_instance)
 
 func _on_enemy_died():
+	enemy_hit_sound.play()
 	score += 10
 	hud.set_score_label(score)
