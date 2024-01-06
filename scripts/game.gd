@@ -18,6 +18,7 @@ func _on_deathzone_area_entered(area):
 
 func _on_player_took_damage():
 	lives -= 1
+	enemy_explode_sound.play()
 	hud.set_lives(lives)
 	if lives == 0:
 		var game_over_inst = game_over_scene.instantiate()
