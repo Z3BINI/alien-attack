@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkm3fomg702wu"]
+[gd_scene load_steps=5 format=3 uid="uid://bkm3fomg702wu"]
+
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_4vkrt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt2l7"]
 bg_color = Color(0.141176, 0.0941176, 0.4, 0.572549)
@@ -21,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4vkrt")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -83,3 +86,5 @@ offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "RETRY"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
